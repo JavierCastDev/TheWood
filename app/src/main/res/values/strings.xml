@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TheWood</string>
+    <string name="background">background</string>
+    <string name="the_wood">THE WOOD</string>
 </resources>
