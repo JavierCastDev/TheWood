@@ -81,6 +81,69 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/sparklestar" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_sparklestar_seven"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="@id/animation_sparklestar_five"
+        app:layout_constraintRight_toRightOf="@id/animation_sparklestar"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sparklestar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_sparklestar_eight"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/animation_sparklestar_seven"
+        app:layout_constraintRight_toRightOf="@id/animation_sparklestar_two"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sparklestar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_sparklestar_nine"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/animation_sparklestar_seven"
+        app:layout_constraintRight_toLeftOf="@id/animation_sparklestar_three"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sparklestar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_sparklestar_ten"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/animation_sparklestar_five"
+        app:layout_constraintRight_toLeftOf="@id/animation_sparklestar_three"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sparklestar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_sparklestar_eleven"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@id/animation_sparklestar_five"
+        app:layout_constraintLeft_toLeftOf="@id/animation_sparklestar_five"
+        app:layout_constraintRight_toRightOf="@id/animation_sparklestar_ten"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sparklestar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_sparklestar_twelve"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/animation_sparklestar_five"
+        app:layout_constraintLeft_toRightOf="@id/animation_sparklestar_five"
+        app:layout_constraintRight_toLeftOf="@id/animation_sparklestar_eleven"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sparklestar" />
+
     <TextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
