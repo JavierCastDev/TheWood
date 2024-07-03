@@ -11,6 +11,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import utils.AnimationUtil
+import utils.AnimationUtil.setScaleAnimation
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,8 +23,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        AnimationUtil.initialize(this)
+
         val playImageButton: ImageButton = findViewById(R.id.play_button)
-        setScaleAnimation(playImageButton, this)
+        setScaleAnimation(playImageButton)
 
         mediaPlayer = MediaPlayer.create(this, R.raw.instrumento)
         mediaPlayer.isLooping = true
@@ -47,29 +51,5 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         mediaPlayer.release()
-    }
-}
-
-fun setScaleAnimation(view: View, context: Context) {
-    val scaleUp = AnimationUtils.loadAnimation(context, R.anim.scale_up)
-    val scaleDown = AnimationUtils.loadAnimation(context, R.anim.scale_down)
-
-    view.setOnTouchListener { v, event ->
-        when (event.action) {
-            MotionEvent.ACTION_DOWN -> {
-                v.startAnimation(scaleDown)
-                v.isPressed = true
-            }
-            MotionEvent.ACTION_UP -> {
-                v.startAnimation(scaleUp)
-                v.performClick()
-                v.isPressed = false
-            }
-            MotionEvent.ACTION_CANCEL -> {
-                v.startAnimation(scaleUp)
-                v.isPressed = false
-            }
-        }
-        true
     }
 }
